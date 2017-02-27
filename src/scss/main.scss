@@ -1,0 +1,51 @@
+$white: #fff;
+$black: #000;
+$main-font: sans-serif;
+$browser-context: 16;
+$smooth: antialiased;
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: $white;
+  color: $black;
+  font-family: $main-font;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: $smooth;
+}
+header{
+  width: 100%;
+  border-bottom: em(1) solid #ddd;
+  padding: em(15);
+  ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    li{
+      padding: em(2);
+      margin: 0 em(10);
+    }
+  }
+}
+ul{
+  margin: 0;
+  padding: 0;
+  li{
+    list-style: none;
+  }
+}
+.cover{
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
